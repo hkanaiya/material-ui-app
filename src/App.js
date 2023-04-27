@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import TreeComponent from './TreeComponent_old';
+import GridComponent from './GridComponent';
 
 function App() {
   return (
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,6 +20,9 @@ function App() {
         >
           Learn React
         </a>
+       <hr/>
+       <TreeComponent></TreeComponent>
+       <GridComponent></GridComponent>
       </header>
     </div>
   );

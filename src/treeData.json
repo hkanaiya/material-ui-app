@@ -1,0 +1,1505 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "Loan Asset JSON schema for Agriculture and Commercial loans",
+	"description": "Loan Asset JSON schema for Agriculture and Commercial loans",
+	"type": "object",
+	"properties": {
+		"?xml": {
+			"version": 1.0,
+			"encoding": "utf-8"
+		},
+		"@xmlns:xs": {
+			"default": "http://www.w3.org/2001/XMLSchema"
+		},
+		"Header": {
+			"$ref": "CommonObjects.JSON#/definitions/Header"
+		},
+		"Items": {
+			"$ref": "#/definitions/LoanDocument"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		"LoanDocument": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Loan"
+			},
+			"additionalProperties": false
+		},
+		"Loan": {
+			"type": "object",
+			"properties": {
+				"AffiliatedInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"AmortizationStartDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"AmortizationTermPaymentPeriodCount": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"AmortizationTermRemainingMonths": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"ApplicationExpirationDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ApplicationSignedDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"AssetClassCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"AssetDescription": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"BondEquivalentSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"BondEquivalentYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},							
+				"BRSSecurityGroupCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"BRSSecurityTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"BalloonPaymentAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"BaseYearDebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"BaseYearDebtServiceCoverageRatioDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"BaseYearDebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"BaseYearNetCashFlowAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"BaseYearNetOperatingIncomeDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"BaseYearNetOperatingIncomeAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"CommitmentDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"CommonGroupBorrowerName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"CountryOfRiskCode": {
+					"$ref": "#/definitions/xs:string"
+				},			
+				"DefaultInterestRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"DefaultInterestStartDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"DenominatedCurrencyCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"EconomicCountryOfRiskCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"EstimatedFundingDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ExpectedPrepaymentPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"ExpectedTroubledDebtRestructureInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"FirstInterestPaymentDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"FirstInterestRateResetDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"InitialDisbursementAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"InitialDisbursementDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"InterestOnlyTermMonths": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"InterestRateResetDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"InvestmentsFloatingRateAssetInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"InvestorLoanParticipationTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LeadBillingDays": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"LifeInterestCapPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LifeInterestFloorPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LoanAcquiredDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanAuthorizedAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LoanClosedDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanCompoundingPeriodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanDealStatusCode": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"LoanDisposalDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanGroupInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"LoanInvestmentStrategyCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanModificationDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanModifiedInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"LoanOriginationAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LoanPerformanceStatusCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanPrepaymentOptionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanStatusCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanSurveillanceCategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanSurveillanceReasonCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanSurveillanceStatusCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanTermPaymentPeriodCount": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"LoanToValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LoanTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"MaturityDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"MetLifeAssetID": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"MetLifeRatingLoanToValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},			
+				"NextPaymentDueDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"OriginalBaseYearDebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalBaseYearDebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalBaseYearNetOperatingIncomeAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalCollateralAppraisedAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalDebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalLoanToValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalMaturityDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"OriginalTermMonths": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"OriginalWeightedAverageLife": {
+					"$ref": "#/definitions/xs:decimal"
+				},				
+				"OriginalYear1DebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginalYear1DebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OutstandingPrincipalBalanceAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PaymentBusinessDayAdjustmentMethodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentLateChargeCalculationBasisCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentLateChargeCalculationMethodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentLateChargeGraceDayConventionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentLateChargeFlatAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PaymentLateChargeGraceDays": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"PaymentLateChargeRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrepaymentPenaltyRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrepaymentWithFeeOpenDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"PrepaymentWithoutFeeOpenDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"PrimaryLoanTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PurchasedLoanToOriginalValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PurchasedLoanToValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"RefinanceInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"RemainingExtensionTermYears": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"RevolverInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"RollStubInterestInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},				
+				"SACCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"SecondaryLoanTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"SeniorityNumber": {
+					"$ref": "#/definitions/xs:integer"
+				},				
+				"SocialInvestmentInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"TotalTransfersAllowedNumber": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"TroubledDebtRestructureInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"TroubledDebtRestructureStartDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"TroubledInvestmentTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"UnfundedCommitmentAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"WeightedAverageCoupon": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"WeightedAverageLoanAge": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"WeightedAverageMaturity": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"Year1DebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"Year1DebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"PurchaseCreditDepreciationInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"CollateralDependantInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},	
+				"LoanPaidOffDate": {
+					"$ref": "#/definitions/xs:date"
+				},	
+				"MetLifeRegionalManagementOfficeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"CombinedLoanToValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"AuthorizedDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"OriginalRelativeValueSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"OriginalYear2DebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},					
+				"REIManagedInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"MetLifeRiskPoolID": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"InternalServicerName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"RefinanceDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"PrimaryLoanPositionTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"SeniorityGroupName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"MetLifeRatingBaseYearDebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"StepRateInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},	
+				"PrimaryPropertyCategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PrimaryPropertySectorCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PrimaryPropertySubSectorCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PrimaryCountyName": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"PrimaryCountryAdminSubdivisionCode": {
+					"$ref": "#/definitions/xs:string"
+				},			
+				"ExternalLienInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},	
+				"BrokerCompanyName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"BrokerContactName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"CapitalMarketGroupInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},									
+				"LoanSurveillanceProbableOutcomeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"MaximumMaturityDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"OverrideBaseYearDebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},				
+				"SeniorAnnualDebtServiceAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"OriginationAssetToUSDFXRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"MetLifeRatingYear1DebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"MetLifeRatingYear2DebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"NextScheduledRatingDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanCategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanSubCategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"SeniorDebtOutstandingPrincipalBalanceAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"DiscountRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"HighYieldInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"InterestPaymentPastDueDays": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrincipalPaymentPastDueDays": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"CrossPoolName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"MetLifeRatingBaseYearDebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},					
+				"MetLifeRatingYear1DebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},					
+				"MetLifeRatingYear2DebtYield": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"MetLifeRatingYear1NetOperatingIncomeAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},				
+				"MetLifeRatingYear2NetOperatingIncomeAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"OtherThanFirstLienInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},	
+				"PriorYearBaseYearNetOperatingIncomeAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"NextInterestRateResetDate": {
+					"$ref": "#/definitions/xs:date"
+				},	
+				"ExpectedAnnualLossPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"SecurityEvidenceCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"NextPaymentAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"LoanDealID": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"OriginationBaseSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"AllocationDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanServicingUnitCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"AgricultureBusinessTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"FAS114ReserveValuationAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"FairValueMethodCode": {
+					"$ref": "#/definitions/xs:string"
+				},		
+				"FundingTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"BankruptcyDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ForeclosureDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"OutsideServicingArrangementCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"MIMParticipationPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"PurchasedPrincipalAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"SOFRConversionCreditAdjustmentSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"ConvertedFromLIBORDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ConvertedFromLIBORInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"PurchaseBenchmarkSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"SourceSystemCommonGroupBorrowerID": {
+					"$ref": "#/definitions/xs:integer"
+				},	
+				"SponsorName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"SustainabilitySubcategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"SustainabilityCategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"ResponsibleInvestmentSubcategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"ResponsibleInvestmentCategoryCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"AccrualStopInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},	
+				"InterestOnlyTermPaymentPeriodCount": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"SwapBondEquivalentSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},	
+				"RemainingAllowedExtensionCount": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"PrepaymentLockoutMonths": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"CollateralSubstitutitonPermittedInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"AmortizationTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanSurveillanceStatusDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"LoanDealName": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"PaymentDateAdjustmentMethodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaidThroughDate": {
+					"$ref": "#/definitions/xs:date"
+				},	
+				"ImpairmentJudgementInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},	
+				"DynamicSACCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"StubInterestInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},				
+				"StubInterestPaymentDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"CalendarCode": {
+					"$ref": "#/definitions/xs:date"
+				},																																																																																																																																																																																																																																																																																																																																																												 													
+				"AssetPortfolioRelations": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/AssetPortfolioRelations"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/AssetPortfolioRelations"
+							}
+						}
+					]
+				},							
+				"AssetPropertyRelations": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/AssetPropertyRelations"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/AssetPropertyRelations"
+							}
+						}
+					]
+				},
+				"AssetRelations": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/AssetRelations"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/AssetRelations"
+							}
+						}
+					]
+				},	
+				"FundingSchedule": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/FundingSchedule"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/FundingSchedule"
+							}
+						}
+					]
+				},						
+				"Identifier": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/Identifier"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/Identifier"
+							}
+						}
+					]
+				},
+				"InterestRateResetSchedule": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/InterestRateResetSchedule"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/InterestRateResetSchedule"
+							}
+						}
+					]
+				},
+				"InterestSchedule": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/InterestSchedule"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/InterestSchedule"
+							}
+						}
+					]
+				},
+				"LoanComment": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/LoanComment"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/LoanComment"
+							}
+						}
+					]
+				},				
+				"PartyRelations": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/PartyRelations"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/PartyRelations"
+							}
+						}
+					]
+				},
+				"PrepaymentSchedule": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/PrepaymentSchedule"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/PrepaymentSchedule"
+							}
+						}
+					]
+				},
+				"Sector": {
+					"anyOf": [
+						{
+							"$ref": "CommonObjects.JSON#/definitions/Sector"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "CommonObjects.JSON#/definitions/Sector"
+							}
+						}
+					]
+				},
+				"IndividualBorrower": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/IndividualBorrower"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/IndividualBorrower"
+							}
+						}
+					]
+				},
+				"AdditionalCollateralLetterOfCredit": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/AdditionalCollateralLetterOfCredit"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/AdditionalCollateralLetterOfCredit"
+							}
+						}
+					]
+				},
+				"AdditionalCollateralCash": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/AdditionalCollateralCash"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/AdditionalCollateralCash"
+							}
+						}
+					]
+				},
+				"AdditionalCollateralGuaranty": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/AdditionalCollateralGuaranty"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/AdditionalCollateralGuaranty"
+							}
+						}
+					]
+				},
+				"ExtensionOption": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/ExtensionOption"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ExtensionOption"
+							}
+						}
+					]
+				},
+				"InterestRateSchedule": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/InterestRateSchedule"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/InterestRateSchedule"
+							}
+						}
+					]
+				},
+				"NonPropertyCollateralValuation": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/NonPropertyCollateralValuation"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/NonPropertyCollateralValuation"
+							}
+						}
+					]
+				},
+				"LoanRelatedTenantLease": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/LoanRelatedTenantLease"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/LoanRelatedTenantLease"
+							}
+						}
+					]
+				},
+				"CollateralReserve": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/CollateralReserve"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/CollateralReserve"
+							}
+						}
+					]
+				},
+				"LockboxProvision": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/LockboxProvision"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/LockboxProvision"
+							}
+						}
+					]
+				},
+				"BankruptcyHistory": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/BankruptcyHistory"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/BankruptcyHistory"
+							}
+						}
+					]
+				},
+				"ForeclosureHistory": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/ForeclosureHistory"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/ForeclosureHistory"
+							}
+						}
+					]
+				},	
+				"RestructureHistory": {
+					"anyOf": [
+						{
+							"$ref": "#/definitions/RestructureHistory"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/RestructureHistory"
+							}
+						}
+					]
+				}																																																							
+			},
+			"required": [
+				"AffiliatedInd",
+				"AssetDescription",
+				"CountryOfRiskCode",
+				"DenominatedCurrencyCode",
+				"LoanClosedDate",
+				"LoanOriginationAmt",
+				"LoanStatusCode",
+				"LoanTypeCode",
+				"MetLifeAssetID"
+			],
+			"additionalProperties": false
+		},
+		"FundingSchedule": {
+			"type": "object",
+			"properties": {
+				"FundingDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"FundingAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"FundingID": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"ScheduleDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"NewMoneyAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"ActualFundingDate": {
+					"$ref": "#/definitions/xs:date"
+				}															
+			},
+			"required": [
+				"FundingDate"
+			],
+			"additionalProperties": false
+		},			
+		"PrepaymentSchedule": {
+			"type": "object",
+			"properties": {
+				"PrepaymentTermTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"StartDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"EndDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"PenaltyFlatAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},					
+				"PenaltyPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrepaymentProvisionComment": {
+					"$ref": "#/definitions/xs:string"
+				}											
+			},
+			"required": [
+				"PrepaymentTermTypeCode",
+				"StartDate"
+			],
+			"additionalProperties": false
+		},
+		"InterestRateResetSchedule": {
+			"type": "object",
+			"properties": {
+				"InterestRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"InterestRateEffectiveDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"InterestReferencedIndexRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"InterestReferencedIndexRateLockDate": {
+					"$ref": "#/definitions/xs:date"
+				}				
+			},
+			"required": [
+				"InterestRate",
+				"InterestRateEffectiveDate"
+			],
+			"additionalProperties": false
+		},
+		"InterestSchedule": {
+			"type": "object",
+			"properties": {
+				"EndDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"IndexLookbackDays": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"IndexRateHolidayConventionCode": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"IndexRoundingActionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"IndexRoundingPrecision": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"IndexSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"IndexValuePeriodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"InterestRateResetFrequencyCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"InterestRateRoundingActionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"InterestRateRoundingPrecision": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"InterestReferencedIndexID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"LoanInterestRateCalculationMethodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LevelPaymentAmountInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"LookbackDays": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"MetLifeLoanInterestTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentHolidayConventionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PeriodicFirstInterestPaymentDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"PeriodicInterestAdjustmentCapPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PeriodicInterestAdjustmentFloorPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PeriodicInterestCapRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PeriodicInterestFloorRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrincipalAmountTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"RateLockDate": {
+					"$ref": "#/definitions/xs:date"
+				},				
+				"StartDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"InterestReferencedMetLifeIndexID": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"MetLifeInterestTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				}						
+			},
+			"required": [
+				"StartDate"
+			],
+			"additionalProperties": false
+		},	
+		"IndividualBorrower": {
+			"type": "object",
+			"properties": {
+				"SourceSystemBorrowerID": {
+					"$ref": "#/definitions/xs:integer"
+				},				
+				"IndividualBorrowerName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"ParticipationPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrimaryBorrowerInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				}			
+			},
+			"required": [
+				"IndividualBorrowerName"
+				, "SourceSystemBorrowerID"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalCollateralLetterOfCredit": {
+			"type": "object",
+			"properties": {
+				"SourceSystemCollateralLetterOfCreditID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"LetterOfCreditCollateralAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				}
+			},
+			"required": [
+				"SourceSystemCollateralLetterOfCreditID"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalCollateralCash": {
+			"type": "object",
+			"properties": {
+				"SourceSystemCollateralCashID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"CashCollateralAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				}
+			},
+			"required": [
+				"SourceSystemCollateralCashID"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalCollateralGuaranty": {
+			"type": "object",
+			"properties": {
+				"SourceSystemCollateralGuarantyID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"GuarantyCollateralAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				}
+			},
+			"required": [
+				"SourceSystemCollateralGuarantyID"
+			],
+			"additionalProperties": false
+		},	
+		"ExtensionOption": {
+			"type": "object",
+			"properties": {
+				"ExtensionOptionSequenceNumber": {
+					"$ref": "#/definitions/xs:integer"
+				},				
+				"ExtendedMaturityDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ExtensionTermMonths": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"ExtensionExercisedInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				}								
+			},
+			"required": [
+				"ExtensionOptionSequenceNumber"
+			],
+			"additionalProperties": false
+		},	
+		"InterestRateSchedule": {
+			"type": "object",
+			"properties": {
+				"InterestRateEffectiveDate": {
+					"$ref": "#/definitions/xs:date"
+				},				
+				"InterestRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"InterestReferencedIndexRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"MetLifeLoanInterestTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"InterestReferencedMetLifeIndexID": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"IndexSpread": {
+					"$ref": "#/definitions/xs:decimal"
+				},				
+				"InterestRateResetFrequencyCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"IndexValuePeriodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanInterestRateCalculationMethodCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanRoundingActionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentHolidayConventionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PeriodicInterestCapRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PeriodicInterestFloorRate": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LookbackDays": {
+					"$ref": "#/definitions/xs:integer"
+				},
+				"PeriodicInterestAdjustmentCapPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PeriodicInterestAdjustmentFloorPercent": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PeriodicFirstInterestPaymentDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"IndexRoundingActionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"IndexRoundingPrecision": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"InterestRateRoundingActionCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"InterestRateRoundingPrecision": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"PrincipalAmountTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LevelPaymentAmountInd": {
+					"type": "string",
+					"pattern": "^((Y|N|X)?)$"
+				},
+				"RateLockDate": {
+					"$ref": "#/definitions/xs:date"
+				},	
+				"IndexRateHolidayConventionCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"PaymentTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},	
+				"IndexRoundingFactor": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"AccrualDayCountConventionCode": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"InterestPaymentFrequencyCode": {
+					"$ref": "#/definitions/xs:decimal"
+				},				
+				"PrincipalPaymentFrequencyCode": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LoanPaymentTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				}																																																																																																											
+			},
+			"required": [
+				"InterestRate"
+				, "InterestRateEffectiveDate"
+				, "MetLifeLoanInterestTypeCode"
+			],
+			"additionalProperties": false
+		},
+		"NonPropertyCollateralValuation": {
+			"type": "object",
+			"properties": {
+				"NonPropertyCollateralValuationID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"NonPropertyCollateralValuationAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"NonPropertyCollateralDesc": {
+					"$ref": "#/definitions/xs:string"
+				}								
+			},
+			"required": [
+				"NonPropertyCollateralValuationID"
+			],
+			"additionalProperties": false
+		},
+		"LoanRelatedTenantLease": {
+			"type": "object",
+			"properties": {
+				"MetLifeTenantLeaseID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"LeaseLoanRentableAreaRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				}								
+			},
+			"required": [
+				"MetLifeTenantLeaseID"
+			],
+			"additionalProperties": false
+		},
+		"CollateralReserve": {
+			"type": "object",
+			"properties": {
+				"CollateralReserveTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"CollateralReserveAmt": {
+					"$ref": "#/definitions/xs:decimal"
+				}								
+			},
+			"required": [
+				"CollateralReserveTypeCode"
+			],
+			"additionalProperties": false
+		},	
+		"LockboxProvision": {
+			"type": "object",
+			"properties": {
+				"LockboxTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"LockboxProvisionID": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"ThresholdDebtServiceCoverageRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"ThresholdLoanToValueRatio": {
+					"$ref": "#/definitions/xs:decimal"
+				},
+				"LockboxPurposeDesc": {
+					"$ref": "#/definitions/xs:decimal"
+				}																			
+			},
+			"required": [
+				"LockboxTypeCode"
+			],
+			"additionalProperties": false
+		},
+		"BankruptcyHistory": {
+			"type": "object",
+			"properties": {
+				"SourceSystemBankruptcyID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"BankruptcyChapterCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"BankruptcyFiledDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"BankruptcyConfirmedDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"BankruptcyReleaseDate": {
+					"$ref": "#/definitions/xs:date"
+				}																			
+			},
+			"required": [
+				"SourceSystemBankruptcyID"
+			],
+			"additionalProperties": false
+		},	
+		"ForeclosureHistory": {
+			"type": "object",
+			"properties": {
+				"SourceSystemForeclosureID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"ForeclosureApprovedDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ForeclosureSaleDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"FirstLegalActionDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ForeclosureProcessTerminatedDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"ForeclosureComment": {
+					"$ref": "#/definitions/xs:string"
+				}																							
+			},
+			"required": [
+				"SourceSystemForeclosureID"
+			],
+			"additionalProperties": false
+		},
+		"RestructureHistory": {
+			"type": "object",
+			"properties": {
+				"SourceSystemRestructureID": {
+					"$ref": "#/definitions/xs:string"
+				},				
+				"LoanRestructureReasonCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"LoanRestructureTypeCode": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"RestructureCureDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"RestructureExitDate": {
+					"$ref": "#/definitions/xs:date"
+				},
+				"RestructureComment": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"RestructureEffectiveDate": {
+					"$ref": "#/definitions/xs:date"
+				}																											
+			},
+			"required": [
+				"SourceSystemRestructureID"
+			],
+			"additionalProperties": false
+		},																													
+		"xs:date": {
+			"type": "string"
+		},
+		"xs:decimal": {
+			"type": "number"
+		},
+		"xs:integer": {
+			"type": "integer"
+		},
+		"xs:string": {
+			"type": "string"
+		}
+	}
+}
